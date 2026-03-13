@@ -4,16 +4,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { IconMail, IconKey, IconArrowRight, IconBriefcase } from '@/components/ui/Icons'
 
-// ─────────────────────────────────────────────
-//  LoginForm Component
-// ─────────────────────────────────────────────
-
-const ROLE_BTN_LABELS = {
-  admin:    'Sign In as Admin',
-  employee: 'Sign In as Employee',
-  manager:  'Sign In as Manager',
-}
-
+ 
+ 
 export default function LoginForm({ role }) {
   const [email,    setEmail]    = useState('')
   const [password, setPassword] = useState('')
@@ -66,7 +58,7 @@ export default function LoginForm({ role }) {
           className="block mb-1.5"
           style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: '0.1em', color: '#6b7d96' }}
         >
-          WORK EMAIL
+           EMAIL
         </label>
         <div className="relative">
           <span className="absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none z-10">
@@ -122,15 +114,7 @@ export default function LoginForm({ role }) {
 
       {/* ── Remember + Forgot ── */}
       <div className="flex items-center justify-between mb-5">
-        <label className="flex items-center gap-2 cursor-pointer select-none">
-          <input
-            type="checkbox"
-            className="hx-checkbox"
-            checked={remember}
-            onChange={(e) => setRemember(e.target.checked)}
-          />
-          <span style={{ fontSize: 13, color: '#8a9ab5' }}>Keep me signed in</span>
-        </label>
+         
         <button
           type="button"
           className="forgot-link"
@@ -183,8 +167,9 @@ export default function LoginForm({ role }) {
           <span className="hx-spinner" />
         ) : (
           <>
+          <p>Sign In</p>
             <IconArrowRight size={15} color="#fff" />
-            <span>{ROLE_BTN_LABELS[role]}</span>
+           
           </>
         )}
       </button>
@@ -199,22 +184,7 @@ export default function LoginForm({ role }) {
       </div>
 
       {/* ── Corporate SSO Button ── */}
-      <button
-        type="button"
-        className="corp-btn w-full flex items-center justify-center gap-2.5 rounded-xl py-3.5"
-        style={{
-          background:   'transparent',
-          border:       '1px solid #1a2d45',
-          color:        '#8a9ab5',
-          fontSize:     14,
-          fontWeight:   600,
-          fontFamily:   'inherit',
-          cursor:       'pointer',
-        }}
-      >
-        <IconBriefcase size={15} color="#8a9ab5" />
-        <span>Sign in with Corporate ID</span>
-      </button>
+    
 
       {/* ── Register Link ── */}
       <p className="text-center mt-6" style={{ fontSize: 13.5, color: '#5a6d85' }}>

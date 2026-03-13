@@ -37,27 +37,16 @@ export default function RightPanel() {
               marginBottom:  6,
             }}
           >
-            Sign in to Helixion
+            Sign In  
           </h2>
-          <p style={{ fontSize: 13.5, color: '#6b7d96', fontWeight: 400 }}>
-            Select your role, then sign in with your credentials
-          </p>
+           
         </div>
 
-        {/* ── Role Selector ── */}
-        <RoleSelector activeRole={role} onRoleChange={setRole} />
-
-        {/* ── Role Chip ── */}
-        <div className="mb-5">
-          <RoleChip role={role} />
-        </div>
+         
 
         {/* ── Login Form ── */}
-        <LoginForm role={role} />
-
-        {/* ── Trust Badges ── */}
-        <TrustBadges />
-
+        <LoginForm   />
+ 
       </div>
     </div>
   )

@@ -266,23 +266,7 @@ export default function RegisterForm() {
           </p>
         )}
       </Field>
-
-      {/* ── Terms checkbox ── */}
-      <div className="flex items-start gap-2.5 mb-5 mt-1">
-        <input
-          type="checkbox"
-          id="terms"
-          className="hx-checkbox mt-0.5"
-          checked={agree}
-          onChange={(e) => setAgree(e.target.checked)}
-        />
-        <label htmlFor="terms" style={{ fontSize: 12.5, color: '#6b7d96', lineHeight: 1.5, cursor: 'pointer' }}>
-          I agree to Helixion&apos;s{' '}
-          <span style={{ color: '#3b6fe0', fontWeight: 600 }}>Terms of Service</span>
-          {' '}and{' '}
-          <span style={{ color: '#3b6fe0', fontWeight: 600 }}>Privacy Policy</span>
-        </label>
-      </div>
+ 
 
       {/* ── Error ── */}
       {error && (
