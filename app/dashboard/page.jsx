@@ -179,7 +179,7 @@ export default function DashboardPage() {
           <h2 style={{ fontSize: 16, fontWeight: 700, marginBottom: 16, color: '#c8d4e8' }}>
             Account Details
           </h2>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 gap-6">
             {[
               { label: 'Username',   value: user.username },
               { label: 'Email',      value: user.email    },
@@ -208,7 +208,7 @@ export default function DashboardPage() {
           <h2 style={{ fontSize: 16, fontWeight: 700, marginBottom: 16, color: '#c8d4e8' }}>
             Quick Actions
           </h2>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-3">
             {[
               { label: '📚 My Courses',      color: '#3b6fe0' },
               { label: '📊 View Reports',    color: '#22c55e' },
