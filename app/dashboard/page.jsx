@@ -164,7 +164,7 @@ export default function DashboardPage() {
         </div>
 
         {/* ── Stats grid ── */}
-        <div className="grid grid-cols-4 gap-4 mb-10">
+        <div className="grid sm:grid-cols-2  gap-4 mb-10">
           <StatCard label="COURSES ASSIGNED" value="12"  sub="3 due this week"   color="#3b6fe0" />
           <StatCard label="COMPLETED"         value="8"   sub="67% completion"    color="#22c55e" />
           <StatCard label="IN PROGRESS"       value="3"   sub="2 overdue"         color="#f59e0b" />
